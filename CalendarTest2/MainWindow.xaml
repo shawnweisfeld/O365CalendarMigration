@@ -1,0 +1,28 @@
+﻿<Window x:Class="CalendarTest2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalendarTest2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Row="0" Grid.Column="0" Width="200">
+            <Button x:Name="ListSourceEvents" Content="List Source Events" Click="ListSourceEvents_Click"></Button>
+            <Button x:Name="ListDestEvents" Content="List Dest Events" Click="ListDestEvents_Click" ></Button>
+            <Button x:Name="DeleteDestEvents" Content="Delete Dest Events" Click="DeleteDestEvents_Click" ></Button>
+            <Button x:Name="CopyEvents" Content="Copy Events" Click="CopyEvents_Click" ></Button>
+        </StackPanel>
+
+        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Output"></TextBox>
+    </Grid>
+</Window>
